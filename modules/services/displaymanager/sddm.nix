@@ -31,7 +31,7 @@
         '';
       });
     in {
-      imports = [ inputs.thyx.nixosModules.default ];
+      imports = [ inputs.thyx.nixosModules.default self.nixosModules.setFonts ];
       services.displayManager.sddm = {
         enable = true;
         wayland.enable = true;
