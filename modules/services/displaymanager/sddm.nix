@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.sddm = { pkgs, lib, ... }:
+  flake.nixosModules.sddm = { pkgs, lib, config, ... }:
     let
       thyxThemed = inputs.thyx.packages.${pkgs.system}.default.overrideAttrs (old: {
         postInstall = (old.postInstall or "") + ''
@@ -8,7 +8,7 @@
           [General]
           AutoFingerprintOnLoad=true
           Background="./themebackground.jpeg"
-          Font="Maple Mono NF CN"
+          Font="${config.theme.font.nerdFont}"
           FontSize="20"
           FormPosition="center"
           Blur="0.03"
