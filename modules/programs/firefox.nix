@@ -8,7 +8,6 @@
 
             profiles.default = {
                 isDefault = true;
-
                 settings = {
                     "browser.aboutConfig.showWarning" = false;
                     "browser.tabs.warnOnClose" = false;
@@ -39,7 +38,21 @@
                     "browser.ai.control.smartWindow" = "none";
                     "browser.ai.control.translations" = "none";
                     "browser.ml.enable" = false;
+
+                    # fonts
+                    "browser.display.use_document_fonts" = 0;
+                    "font.name.monospace.x-western" = "Maple Mono NF CN";
+                    "font.name.sans-serif.x-western" = "Maple Mono NF CN";
+                    "font.name.serif.x-western" = "Maple Mono NF CN";
+
+                    "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
                 };
+
+                userContent = ''
+                  *:not([style*="Font Awesome"]):not([style*="Material Icons"]):not([style*="IcoMoon"]):not([class*="fa-"]):not([class^="icon-"]) {
+                    font-family: "Maple Mono NF CN" !important;
+                  }
+                '';
 
                 search = import ../../config/search-config.nix { inherit pkgs; };
             };
