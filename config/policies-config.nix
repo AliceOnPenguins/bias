@@ -67,7 +67,7 @@ in {
     "github-repository-size@pranavmangal" = "gh-repo-size";
     "jid1-BoFifL9Vbdl2zQ@jetpack" = "decentraleyes";
     "{d7742d87-e61d-4b78-b8a1-b469842139fa}" = "vimium";
-    "{73a3fc79-686d-4503-a618-14cc08365804}" = "vesper";
+    "yunah-dark@aliceonpenguins" = "yunah-dark";
   };
 
   Preferences = mkLockedAttrs {
