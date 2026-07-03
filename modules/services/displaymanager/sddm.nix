@@ -3,11 +3,11 @@
     let
       thyxThemed = inputs.thyx.packages.${pkgs.system}.default.overrideAttrs (old: {
         postInstall = (old.postInstall or "") + ''
-          install -Dm644 ${./../../../wallpapers/illit1.jpeg} $out/share/sddm/themes/thyx/illit1.jpeg
+          install -Dm644 ${./../../../wallpapers/mamihlapinatapai.jpg} $out/share/sddm/themes/thyx/themebackground.jpeg
           cat > $out/share/sddm/themes/thyx/theme.conf <<EOF
           [General]
           AutoFingerprintOnLoad=true
-          Background="./illit1.jpeg"
+          Background="./themebackground.jpeg"
           Font="Maple Mono NF CN"
           FontSize="20"
           FormPosition="center"
