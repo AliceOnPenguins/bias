@@ -334,12 +334,20 @@
                                 id = "d275a934-620c-4fcf-ad2b-486e34ceabe7";
                               }
                             {
-                                name = "fxtwitter";
-                                find = ''https\:\/\/(?:.*?twitter.*?|.*?x.*?)\.com\/([a-zA-Z0-9_]+\/status\/\d+)\S*src'';
-                                replace = "[[source]](<https://fxtwitter.com/$1>) [[raw]](https://fxtwitter.com/$1.mp4)";
+                                name = "fxtwitter-source";
+                                find = ''https?:\/\/(?:www\.)?(?:twitter|x)\.com\/([a-zA-Z0-9_]+\/status\/\d+)(?!\S*src)\S*'';
+                                replace = "[[source]](https://fxtwitter.com/$1)";
                                 onlyIfIncludes = "";
                                 scope = "myMessages";
                                 id = "465442e7-4814-41e8-acc6-cba0cc74e58f";
+                              }
+                            {
+                                name = "fxtwitter-raw";
+                                find = ''https?:\/\/(?:www\.)?(?:twitter|x)\.com\/([a-zA-Z0-9_]+\/status\/\d+)\S*src'';
+                                replace = "https://fxtwitter.com/$1.mp4";
+                                onlyIfIncludes = "";
+                                scope = "myMessages";
+                                id = "a1b2c3d4-5678-4abc-9def-0123456789ab";
                               }
                             {
                                 name = "fxtwitch";
