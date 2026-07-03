@@ -20,7 +20,11 @@
                 wallpaper = {
                     enabled = true;
                     default.path = "\~/bias/wallpapers/illit2.jpeg";
-                    directory = "\~";
+                    directory = "\~/bias/wallpapers/";
+                    automation = {
+                        enabled = true;
+                        interval_seconds = 1200;
+                      };
                   };
 
                 bar = {
