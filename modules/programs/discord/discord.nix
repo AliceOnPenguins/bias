@@ -31,7 +31,7 @@
                 themeLinks = [];
                 eagerPatches = false;
                 enabledThemes = [
-                  "yunah24.css"
+                "yunahDark.css"
                 ];
                 enabledThemeLinks = [];
                 enableOnlineThemes = true;
