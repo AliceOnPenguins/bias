@@ -321,7 +321,36 @@
                     FixYoutubeEmbeds = {
                         enabled = true;
                       };
-
+                    TextReplace = {
+                        enabled = true;
+                        stringRules = [];
+                        regexRules = [
+                            {
+                                name = "Rxddit";
+                                find = ''http(?:s)?:\/\/(?:redd\.it\/|(?:[\w-]+\.)?r[ex]ddit\.com\/)(?:(r\/[\w-]+\/s\/\w+)|(u)(?:ser)?(\/)([\w-]+)(.*?)?|(?:(?:r\/[\w-]+\/)?((c)omments\/))(\w+)(?:\/[^\/\s\)\]\}]+)+(\/)(\w+)|(?:(?:(?:r\/[\w-]+\/)?comments\/)|(?<=redd\.it\/))(\w+)(?:\/.*?)?|(?!r\/|u\/|user\/|comments\/)(.*?)?)\/?(?:[?#][^\s\)\]\}]*)?(?=[\s\)\]\}]|$)'';
+                                replace = "https://rxddit.com/$1$2$3$4$5$6$8$9$7$9$10$11";
+                                onlyIfIncludes = "";
+                                scope = "myMessages";
+                                id = "d275a934-620c-4fcf-ad2b-486e34ceabe7";
+                              }
+                            {
+                                name = "fxtwitter";
+                                find = ''https\:\/\/(?:.*?twitter.*?|.*?x.*?)\.com\/([a-zA-Z0-9_]+\/status\/\d+)\S*src'';
+                                replace = "[[source]](<https://fxtwitter.com/$1>) [[raw]](https://fxtwitter.com/$1.mp4)";
+                                onlyIfIncludes = "";
+                                scope = "myMessages";
+                                id = "465442e7-4814-41e8-acc6-cba0cc74e58f";
+                              }
+                            {
+                                name = "fxtwitch";
+                                find = ''https?:\/\/(?:clips\.twitch\.tv|(?:www\.)?twitch\.tv\/\w+\/clip)\/([A-Za-z0-9\-_]+)'';
+                                replace = "https://fxtwitch.seria.moe/clip/$1";
+                                onlyIfIncludes = "";
+                                scope = "myMessages";
+                                id = "e37176d0-8062-4516-9caf-49d35b5f7bd7";
+                              }
+                          ];
+                      };
                   };
                 uiElements = {
                     chatBarButtons = {};
