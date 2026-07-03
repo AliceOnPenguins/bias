@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-    flake.homeModules.firefox = { pkgs, lib, ... }: {
+    flake.homeModules.firefox = { pkgs, lib, config, ... }: {
         programs.firefox = {
             enable = true;
             package = pkgs.firefox-bin;
@@ -41,16 +41,16 @@
 
                     # fonts
                     "browser.display.use_document_fonts" = 0;
-                    "font.name.monospace.x-western" = "Maple Mono NF CN";
-                    "font.name.sans-serif.x-western" = "Maple Mono NF CN";
-                    "font.name.serif.x-western" = "Maple Mono NF CN";
+                    "font.name.monospace.x-western" = config.theme.font.nerdFont;
+                    "font.name.sans-serif.x-western" = config.theme.font.nerdFont;
+                    "font.name.serif.x-western" = config.theme.font.nerdFont;
 
                     "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
                 };
 
                 userContent = ''
                   *:not([style*="Font Awesome"]):not([style*="Material Icons"]):not([style*="IcoMoon"]):not([class*="fa-"]):not([class^="icon-"]) {
-                    font-family: "Maple Mono NF CN" !important;
+                    font-family: "${config.theme.font.nerdFont}" !important;
                   }
                 '';
 
