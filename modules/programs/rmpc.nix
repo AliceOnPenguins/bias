@@ -9,7 +9,7 @@
         (
             address: "/run/user/1000/mpd/socket",
             password: None,
-            theme: "vesper",
+            theme: "yunah",
             enable_config_hot_reload: true,
             cache_dir: None,
             on_song_change: None,
@@ -141,7 +141,7 @@
       '';
     };
 
-    xdg.configFile."rmpc/themes/vesper.ron".text = ''
+    xdg.configFile."rmpc/themes/yunah.ron".text = ''
       #![enable(implicit_some)]
       #![enable(unwrap_newtypes)]
       #![enable(unwrap_variant_newtypes)]
