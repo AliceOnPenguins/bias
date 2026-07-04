@@ -11,6 +11,7 @@
             password: None,
             theme: "yunah",
             enable_config_hot_reload: true,
+            lyrics_dir: "~/Music",
             cache_dir: None,
             on_song_change: None,
             volume_step: 5,
@@ -114,13 +115,19 @@
                 album_sort_by: Date,
             ),
             tabs: [
-                (
+            (
                     name: "Playing",
                     pane: Split(
                         direction: Horizontal,
                         panes: [
                             (size: "65%", pane: Pane(Queue)),
-                            (size: "35%", pane: Pane(AlbumArt)),
+                            (size: "35%", pane: Split(
+                                direction: Vertical,
+                                panes: [
+                                    (size: "100%", pane: Pane(AlbumArt)),
+                                    (size: "5", pane: Pane(Lyrics)),
+                                ],
+                            )),
                         ],
                     ),
                 ),
