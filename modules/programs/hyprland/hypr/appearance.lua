@@ -30,20 +30,20 @@ hl.config({
   },
 
   decoration = {
-    rounding = 9,
-    rounding_power = 4,
+    rounding = 10,
+    rounding_power = 3,
     active_opacity = 1.0,
     inactive_opacity = 1.0,
 
-  shadow = {
-    enabled      = true,
-    range        = 12,
-    render_power = 6,
-    sharp        = false,
-    color        = "rgba(0,0,0,0.19)",
-    offset       = {0, 0},
-    scale        = 1,
-  },
+    shadow = {
+      enabled      = true,
+      range        = 12,
+      render_power = 6,
+      sharp        = false,
+      color        = "rgba(0,0,0,0.19)",
+      offset       = { 0, 0 },
+      scale        = 1,
+    },
 
     blur = {
       enabled = true,

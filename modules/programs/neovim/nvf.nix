@@ -19,8 +19,7 @@
             indent-blankline.enable = true;
           };
           options = {
-            number = true;
-            relativenumber = true;
+            termguicolors = true;
             clipboard = "unnamedplus";
             undofile = true;
             undodir = "${config.home.homeDirectory}/.local/state/nvf/undo/";
