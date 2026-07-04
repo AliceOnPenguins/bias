@@ -61,7 +61,7 @@
 
           treesitter = {
             enable = true;
-            fold = true;
+            fold = false;
             context.enable = true;
           };
 
