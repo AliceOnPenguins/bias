@@ -11,7 +11,6 @@
         home.stateVersion = "26.11";
         imports = builtins.attrValues self.homeModules;
         home.packages = with pkgs; [
-            neovim
             rembg
             _7zz
             oculante
