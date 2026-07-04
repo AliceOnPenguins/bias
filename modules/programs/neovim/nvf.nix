@@ -119,6 +119,9 @@
             lua.enable = true;
             bash.enable = true;
             markdown.enable = true;
+            yaml.enable = true;
+            java.enable = true;
+            kotlin.enable = true;
           };
 
           autocomplete.blink-cmp.enable = true;
