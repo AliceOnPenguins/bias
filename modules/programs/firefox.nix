@@ -40,7 +40,7 @@
                     "browser.ml.enable" = false;
 
                     # fonts
-                    "browser.display.use_document_fonts" = 0;
+                    "browser.display.use_document_fonts" = 1;
                     "font.name.monospace.x-western" = config.theme.font.nerdFont;
                     "font.name.sans-serif.x-western" = config.theme.font.nerdFont;
                     "font.name.serif.x-western" = config.theme.font.nerdFont;
@@ -49,9 +49,9 @@
                 };
 
                 userContent = ''
-                  *:not([style*="Font Awesome"]):not([style*="Material Icons"]):not([style*="IcoMoon"]):not([class*="fa-"]):not([class^="icon-"]) {
+                    *:not([data-cds="Icon"]) {
                     font-family: "${config.theme.font.nerdFont}" !important;
-                  }
+                    }
                 '';
 
                 search = import ../../config/search-config.nix { inherit pkgs; };
