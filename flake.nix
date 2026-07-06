@@ -4,7 +4,7 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
-    
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,17 +15,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf = {
-      url = "github:NotAShelf/nvf";    
+      url = "github:NotAShelf/nvf";
     };
 
     thyx.url = "github:rccyx/thyx";
 
     noctalia = {
-    	url = "github:noctalia-dev/noctalia";
-	  };
+      url = "github:noctalia-dev/noctalia";
+    };
   };
 
-  outputs = inputs: inputs.flake-parts.lib.mkFlake
-    {inherit inputs;}
-    (inputs.import-tree ./modules);
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }
