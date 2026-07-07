@@ -36,6 +36,10 @@ hl.bind("SUPER + SHIFT + J", hy3.move_window("down"))
 hl.bind("SUPER + SHIFT + H", hy3.move_window("left", { once = true }))
 hl.bind("SUPER + SHIFT + L", hy3.move_window("right", { once = true }))
 
+-- hy3 expand/shrink
+hl.bind("SUPER + CTRL + L", hy3.expand("expand"))
+hl.bind("SUPER + CTRL + H", hy3.expand("shrink"))
+
 -- Close window
 hl.bind("ALT + F4", hl.dsp.window.close())
 hl.bind("SUPER + Q", hy3.kill_active())
