@@ -16,7 +16,7 @@ local filemanager = "kitty -1 yazi"
 local browser = "firefox"
 local editor = "kitty -1 nvim"
 
--- Focus movement (tree-aware, use hy3 not vanilla movefocus)
+-- Focus movement
 hl.bind("SUPER + left", hy3.move_focus("left"), { repeating = true })
 hl.bind("SUPER + right", hy3.move_focus("right"), { repeating = true })
 hl.bind("SUPER + up", hy3.move_focus("up"), { repeating = true })
@@ -26,11 +26,6 @@ hl.bind("SUPER + L", hy3.move_focus("right"), { repeating = true })
 hl.bind("SUPER + K", hy3.move_focus("up"), { repeating = true })
 hl.bind("SUPER + J", hy3.move_focus("down"), { repeating = true })
 
--- Group resize (replaces colresize +/-conf)
--- hy3.expand grows/shrinks the focused node relative to its siblings
-hl.bind("SUPER + CTRL + L", hy3.expand("expand"))
-hl.bind("SUPER + CTRL + H", hy3.expand("shrink"))
-
 -- Window movement
 hl.bind("SUPER + SHIFT + left", hy3.move_window("left"))
 hl.bind("SUPER + SHIFT + right", hy3.move_window("right"))
@@ -38,16 +33,8 @@ hl.bind("SUPER + SHIFT + up", hy3.move_window("up"))
 hl.bind("SUPER + SHIFT + down", hy3.move_window("down"))
 hl.bind("SUPER + SHIFT + K", hy3.move_window("up"))
 hl.bind("SUPER + SHIFT + J", hy3.move_window("down"))
--- H/L kept as a "swap" (once = true skips entering/leaving groups, closest analog to swapcol)
 hl.bind("SUPER + SHIFT + H", hy3.move_window("left", { once = true }))
 hl.bind("SUPER + SHIFT + L", hy3.move_window("right", { once = true }))
-
--- hy3 group management (i3-like split/tab controls)
-hl.bind("SUPER + S", hy3.make_group("v"))
-hl.bind("SUPER + G", hy3.make_group("h"))
-hl.bind("SUPER + Z", hy3.change_group("toggletab"))
-hl.bind("SUPER + A", hy3.change_focus("raise"))
-hl.bind("SUPER + SHIFT + A", hy3.change_focus("lower"))
 
 -- Close window
 hl.bind("ALT + F4", hl.dsp.window.close())
