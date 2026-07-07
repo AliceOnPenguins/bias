@@ -26,7 +26,7 @@ hl.config({
     },
     border_size = 2,
     allow_tearing = false,
-    layout = "scrolling",
+    layout = "hy3",
   },
 
   decoration = {
