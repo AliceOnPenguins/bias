@@ -20,13 +20,17 @@ local function set_autotile(width, height)
   })
 end
 
-hl.on("workspace.active", function(ws)
-  local id = ws.id
+local function apply_autotile_for_workspace(id)
   if id >= 1 and id <= 5 then
-    -- 4K logical width ~3840 → 0.29 * 3840
     set_autotile(1100, 500)
   elseif id >= 6 and id <= 10 then
-    -- 1080p logical width ~1920 → 0.29 * 1920
     set_autotile(560, 500)
   end
+end
+
+hl.on("workspace.active", function(ws)
+  apply_autotile_for_workspace(ws.id)
 end)
+
+-- run once immediately for whatever workspace is active at boot
+apply_autotile_for_workspace(hl.get_active_workspace().id)
