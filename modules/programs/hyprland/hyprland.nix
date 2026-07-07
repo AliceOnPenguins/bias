@@ -14,12 +14,12 @@
     {
       wayland.windowManager.hyprland = {
         enable = true;
-        package = null;
-        portalPackage = null;
+        configType = "lua";
+        package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+        portalPackage =
+          inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
         systemd.enable = false;
-        plugins = [
-          pkgs.hyprlandPlugins.hy3
-        ];
+        plugins = [ inputs.hy3.packages.${pkgs.stdenv.hostPlatform.system}.hy3 ];
         extraLuaFiles = {
           "animations" = {
             content = ./hypr/animations.lua;
