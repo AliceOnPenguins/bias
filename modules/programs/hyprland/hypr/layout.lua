@@ -7,10 +7,11 @@
 -------------------------------------------------------
 
 hl.config({
-  scrolling = {
-    column_width = 0.5,
-    explicit_column_widths = "0.33333, 0.5, 0.66667, 1.0",
-    follow_min_visible = 1.0,
-    wrap_swapcol = false,
+  plugin = {
+    hy3 = {
+      autotile = {
+        enable = false,
+      },
+    },
   },
 })

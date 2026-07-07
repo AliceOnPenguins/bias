@@ -1,3 +1,4 @@
+-------------------------------------------------------------------------------
 -- ██╗  ██╗███████╗██╗   ██╗██████╗ ██╗███╗   ██╗██████╗ ██╗███╗   ██╗ ██████╗
 -- ██║ ██╔╝██╔════╝╚██╗ ██╔╝██╔══██╗██║████╗  ██║██╔══██╗██║████╗  ██║██╔════╝
 -- █████╔╝ █████╗   ╚████╔╝ ██████╔╝██║██╔██╗ ██║██║  ██║██║██╔██╗ ██║██║  ███╗
@@ -6,6 +7,8 @@
 -- ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝
 -------------------------------------------------------------------------------
 
+local hy3 = hl.plugin.hy3
+
 local noctalia = "noctalia msg"
 local terminal = "kitty -1"
 local music = "kitty -1 rmpc"
@@ -13,33 +16,42 @@ local filemanager = "kitty -1 yazi"
 local browser = "firefox"
 local editor = "kitty -1 nvim"
 
--- Focus movement
-hl.bind("SUPER + left", hl.dsp.focus({ direction = "left" }), { repeating = true })
-hl.bind("SUPER + right", hl.dsp.focus({ direction = "right" }), { repeating = true })
-hl.bind("SUPER + up", hl.dsp.focus({ direction = "up" }), { repeating = true })
-hl.bind("SUPER + down", hl.dsp.focus({ direction = "down" }), { repeating = true })
-hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }), { repeating = true })
-hl.bind("SUPER + L", hl.dsp.focus({ direction = "right" }), { repeating = true })
-hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }), { repeating = true })
-hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }), { repeating = true })
+-- Focus movement (tree-aware, use hy3 not vanilla movefocus)
+hl.bind("SUPER + left", hy3.move_focus("left"), { repeating = true })
+hl.bind("SUPER + right", hy3.move_focus("right"), { repeating = true })
+hl.bind("SUPER + up", hy3.move_focus("up"), { repeating = true })
+hl.bind("SUPER + down", hy3.move_focus("down"), { repeating = true })
+hl.bind("SUPER + H", hy3.move_focus("left"), { repeating = true })
+hl.bind("SUPER + L", hy3.move_focus("right"), { repeating = true })
+hl.bind("SUPER + K", hy3.move_focus("up"), { repeating = true })
+hl.bind("SUPER + J", hy3.move_focus("down"), { repeating = true })
 
--- Scrolling layout binds 
-hl.bind("SUPER + CTRL + L", hl.dsp.layout("colresize +conf"))
-hl.bind("SUPER + CTRL + H", hl.dsp.layout("colresize -conf"))
+-- Group resize (replaces colresize +/-conf)
+-- hy3.expand grows/shrinks the focused node relative to its siblings
+hl.bind("SUPER + CTRL + L", hy3.expand("expand"))
+hl.bind("SUPER + CTRL + H", hy3.expand("shrink"))
 
 -- Window movement
-hl.bind("SUPER + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
-hl.bind("SUPER + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
-hl.bind("SUPER + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
-hl.bind("SUPER + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
-hl.bind("SUPER + SHIFT + H", hl.dsp.layout("swapcol l"))
-hl.bind("SUPER + SHIFT + L", hl.dsp.layout("swapcol r"))
-hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+hl.bind("SUPER + SHIFT + left", hy3.move_window("left"))
+hl.bind("SUPER + SHIFT + right", hy3.move_window("right"))
+hl.bind("SUPER + SHIFT + up", hy3.move_window("up"))
+hl.bind("SUPER + SHIFT + down", hy3.move_window("down"))
+hl.bind("SUPER + SHIFT + K", hy3.move_window("up"))
+hl.bind("SUPER + SHIFT + J", hy3.move_window("down"))
+-- H/L kept as a "swap" (once = true skips entering/leaving groups, closest analog to swapcol)
+hl.bind("SUPER + SHIFT + H", hy3.move_window("left", { once = true }))
+hl.bind("SUPER + SHIFT + L", hy3.move_window("right", { once = true }))
+
+-- hy3 group management (i3-like split/tab controls)
+hl.bind("SUPER + S", hy3.make_group("v"))
+hl.bind("SUPER + G", hy3.make_group("h"))
+hl.bind("SUPER + Z", hy3.change_group("toggletab"))
+hl.bind("SUPER + A", hy3.change_focus("raise"))
+hl.bind("SUPER + SHIFT + A", hy3.change_focus("lower"))
 
 -- Close window
 hl.bind("ALT + F4", hl.dsp.window.close())
-hl.bind("SUPER + Q", hl.dsp.window.close())
+hl.bind("SUPER + Q", hy3.kill_active())
 
 -- Floating
 hl.bind("SUPER + ALT + space", hl.dsp.window.float({ action = "toggle" }))
@@ -54,10 +66,10 @@ hl.bind("CTRL + SUPER + J", hl.dsp.focus({ workspace = "r+1" }))
 hl.bind("CTRL + SUPER + K", hl.dsp.focus({ workspace = "r-1" }))
 
 -- Move window to workspace
-hl.bind("CTRL + SUPER + SHIFT + down", hl.dsp.window.move({ workspace = "r+1" }))
-hl.bind("CTRL + SUPER + SHIFT + up", hl.dsp.window.move({ workspace = "r-1" }))
-hl.bind("CTRL + SUPER + SHIFT + J", hl.dsp.window.move({ workspace = "r+1" }))
-hl.bind("CTRL + SUPER + SHIFT + K", hl.dsp.window.move({ workspace = "r-1" }))
+hl.bind("CTRL + SUPER + SHIFT + down", hy3.move_to_workspace("r+1"))
+hl.bind("CTRL + SUPER + SHIFT + up", hy3.move_to_workspace("r-1"))
+hl.bind("CTRL + SUPER + SHIFT + J", hy3.move_to_workspace("r+1"))
+hl.bind("CTRL + SUPER + SHIFT + K", hy3.move_to_workspace("r-1"))
 
 -- Mouse scroll workspace
 hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "r+1" }))
