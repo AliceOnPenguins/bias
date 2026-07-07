@@ -1,5 +1,6 @@
 {
   inputs = {
+
     nixpkgs.url = "github:NixOS/nixpkgs/567a49d1913ce81ac6e9582e3553dd90a955875f";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -14,6 +15,7 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nvf = {
       url = "github:NotAShelf/nvf";
     };
@@ -23,6 +25,17 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia";
     };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland?ref=v0.55.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hy3 = {
+      url = "github:outfoxxed/hy3?ref=hl0.55.0";
+      inputs.hyprland.follows = "hyprland";
+    };
+
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
