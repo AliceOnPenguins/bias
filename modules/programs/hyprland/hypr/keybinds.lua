@@ -8,7 +8,6 @@
 -------------------------------------------------------------------------------
 
 local hy3 = hl.plugin.hy3
-
 local noctalia = "noctalia msg"
 local terminal = "kitty -1"
 local music = "kitty -1 rmpc"
@@ -17,14 +16,23 @@ local browser = "firefox"
 local editor = "kitty -1 nvim"
 
 -- Focus movement
-hl.bind("SUPER + left", hy3.move_focus("left"), { repeating = true })
-hl.bind("SUPER + right", hy3.move_focus("right"), { repeating = true })
-hl.bind("SUPER + up", hy3.move_focus("up"), { repeating = true })
-hl.bind("SUPER + down", hy3.move_focus("down"), { repeating = true })
-hl.bind("SUPER + H", hy3.move_focus("left"), { repeating = true })
-hl.bind("SUPER + L", hy3.move_focus("right"), { repeating = true })
-hl.bind("SUPER + K", hy3.move_focus("up"), { repeating = true })
-hl.bind("SUPER + J", hy3.move_focus("down"), { repeating = true })
+local function smart_move_focus(direction)
+  local ws = hl.get_active_workspace()
+  if ws and ws.has_fullscreen then
+    hl.dispatch(hl.dsp.focus({ direction = direction }))
+  else
+    hl.dispatch(hy3.move_focus(direction))
+  end
+end
+
+hl.bind("SUPER + left", function() smart_move_focus("left") end, { repeating = true })
+hl.bind("SUPER + right", function() smart_move_focus("right") end, { repeating = true })
+hl.bind("SUPER + up", function() smart_move_focus("up") end, { repeating = true })
+hl.bind("SUPER + down", function() smart_move_focus("down") end, { repeating = true })
+hl.bind("SUPER + H", function() smart_move_focus("left") end, { repeating = true })
+hl.bind("SUPER + L", function() smart_move_focus("right") end, { repeating = true })
+hl.bind("SUPER + K", function() smart_move_focus("up") end, { repeating = true })
+hl.bind("SUPER + J", function() smart_move_focus("down") end, { repeating = true })
 
 -- Window movement
 hl.bind("SUPER + SHIFT + left", hy3.move_window("left"))
