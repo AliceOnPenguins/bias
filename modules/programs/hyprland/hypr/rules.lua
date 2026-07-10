@@ -61,16 +61,11 @@ for _, focus in ipairs(focusClasses) do
   hl.window_rule({ match = { class = focus }, focus_on_activate = true })
 end
 
--- -- Opacity for apps
--- local opacityClasses = {
--- 	-- "com.mitchellh.ghostty",
--- 	-- "feishin",
--- 	"^[tT]hunar$",
--- 	"dev.noctalia.Noctalia.Settings",
--- }
--- for _, opacity in ipairs(opacityClasses) do
--- 	hl.window_rule({ match = { class = opacity }, opacity = 0.75 })
--- end
+-- keep every window rendering even when not on the visible workspace
+hl.window_rule({
+  match = { class = ".*" }, -- matches all window classes
+  render_unfocused = true,
+})
 
 -- PiP - pin to all workspaces
 hl.window_rule({
