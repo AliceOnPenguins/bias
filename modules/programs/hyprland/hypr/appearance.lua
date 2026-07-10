@@ -29,6 +29,10 @@ hl.config({
     layout = "hy3",
   },
 
+  cursor = {
+    enable_hyprcursor = false,
+  },
+
   decoration = {
     rounding = 10,
     rounding_power = 3,
