@@ -123,6 +123,9 @@
             java.enable = true;
             kotlin.enable = true;
           };
+          luaConfigRC.skript = ''
+            vim.opt.runtimepath:append("~/bias/modules/programs/neovim/plugins/skript")
+          '';
 
           autocomplete.blink-cmp.enable = true;
 
