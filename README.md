@@ -8,7 +8,7 @@ My take on NixOS with a [Dendritic structure](https://github.com/mightyiam/dendr
 | WM | [Hyprland](https://github.com/hyprwm/Hyprland) |
 | Shell | [fish](https://github.com/fish-shell/fish-shell) |
 | Terminal | [kitty](https://github.com/kovidgoyal/kitty) |
-| Editor | [neovim](https://neovim.io/) |
+| Editor | [neovim](https://neovim.io/) through [nvf](https://github.com/NotAShelf/nvf) |
 | Files | [Yazi](https://yazi-rs.github.io/) |
 | Bar | [Noctalia v5](https://github.com/noctalia-dev) |
 | Music | [mpd](https://www.musicpd.org/) + [rmpc](https://rmpc.mierak.dev/) |
