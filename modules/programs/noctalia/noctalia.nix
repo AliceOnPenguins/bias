@@ -102,7 +102,6 @@
             polkit_agent = true;
             settings_show_advanced = true;
             show_location = false;
-            ui_scale = 1.5;
             panel = {
               categories = false;
               placement = "centered";
@@ -110,6 +109,10 @@
               sort_by_usage = false;
               show_icons = true;
             };
+          };
+
+          accessibility = {
+            ui_scale = 1.5;
           };
 
           weather = {
