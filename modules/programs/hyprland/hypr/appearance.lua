@@ -24,7 +24,7 @@ hl.config({
       },
       inactive_border = "rgba(1a1a1aaa)",
     },
-    border_size = 2,
+    border_size = 4,
     allow_tearing = false,
     layout = "hy3",
   },
@@ -34,7 +34,7 @@ hl.config({
   },
 
   decoration = {
-    rounding = 10,
+    rounding = 14,
     rounding_power = 3,
     active_opacity = 1.0,
     inactive_opacity = 1.0,
