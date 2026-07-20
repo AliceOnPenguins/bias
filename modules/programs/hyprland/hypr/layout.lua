@@ -7,17 +7,17 @@
 -------------------------------------------------------
 
 -- local function set_autotile(width, height)
-hl.config({
-  plugin = {
-    hy3 = {
-      autotile = {
-        enable = true,
-        trigger_width = 1100, -- width,
-        trigger_height = 500, -- height,
-      },
-    },
-  },
-})
+-- hl.config({
+--   plugin = {
+--     hy3 = {
+--       autotile = {
+--         enable = true,
+--         trigger_width = 1100, -- width,
+--         trigger_height = 500, -- height,
+--       },
+--     },
+--   },
+-- })
 -- end
 --
 -- local function apply_autotile_for_workspace(id)
@@ -34,3 +34,12 @@ hl.config({
 --
 -- -- run once immediately for whatever workspace is active at boot
 -- apply_autotile_for_workspace(hl.get_active_workspace().id)
+hl.config({
+  scrolling = {
+    column_width = 0.5,
+    follow_min_visible = 0.1,
+    focus_fit_method = 1,
+    wrap_focus = false,
+    wrap_swapcol = false,
+  },
+})
