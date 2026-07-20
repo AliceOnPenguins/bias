@@ -19,7 +19,6 @@
         portalPackage =
           inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
         systemd.enable = false;
-        plugins = [ inputs.hy3.packages.${pkgs.stdenv.hostPlatform.system}.hy3 ];
         extraLuaFiles = {
           "animations" = {
             content = ./hypr/animations.lua;
