@@ -35,8 +35,8 @@ hl.bind("SUPER + SHIFT + H", hl.dsp.layout("swapcol l"))
 hl.bind("SUPER + SHIFT + L", hl.dsp.layout("swapcol r"))
 
 -- Column resize
-hl.bind("SUPER + CTRL + L", hl.dsp.layout("colresize +0.1"))
-hl.bind("SUPER + CTRL + H", hl.dsp.layout("colresize -0.1"))
+hl.bind("SUPER + CTRL + L", hl.dsp.layout("colresize +conf"))
+hl.bind("SUPER + CTRL + H", hl.dsp.layout("colresize -conf"))
 
 -- Close window
 hl.bind("ALT + F4", hl.dsp.window.close())
