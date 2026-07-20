@@ -81,7 +81,7 @@ local animations = {
   { leaf = "fade",             speed = 2, bezier = "smoothIn" },
 
   -- workspaces and special
-  { leaf = "workspaces",       speed = 2, bezier = "heavyOvershoot", style = "slidefade 20%" },
+  { leaf = "workspaces",       speed = 2, bezier = "heavyOvershoot", style = "slidefadevert 30%" },
   { leaf = "specialWorkspace", speed = 5, spring = "mediumSpring",   style = "slidefadevert -80%" },
 }
 
