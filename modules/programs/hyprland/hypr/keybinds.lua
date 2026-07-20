@@ -7,7 +7,6 @@
 -- ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝
 -------------------------------------------------------------------------------
 
-local hy3 = hl.plugin.hy3
 local noctalia = "noctalia msg"
 local terminal = "kitty -1"
 local music = "kitty -1 rmpc"
@@ -16,41 +15,32 @@ local browser = "firefox"
 local editor = "kitty -1 nvim"
 
 -- Focus movement
-local function smart_move_focus(direction)
-  local ws = hl.get_active_workspace()
-  if ws and ws.has_fullscreen then
-    hl.dispatch(hl.dsp.focus({ direction = direction }))
-  else
-    hl.dispatch(hy3.move_focus(direction))
-  end
-end
-
-hl.bind("SUPER + left", function() smart_move_focus("left") end, { repeating = true })
-hl.bind("SUPER + right", function() smart_move_focus("right") end, { repeating = true })
-hl.bind("SUPER + up", function() smart_move_focus("up") end, { repeating = true })
-hl.bind("SUPER + down", function() smart_move_focus("down") end, { repeating = true })
-hl.bind("SUPER + H", function() smart_move_focus("left") end, { repeating = true })
-hl.bind("SUPER + L", function() smart_move_focus("right") end, { repeating = true })
-hl.bind("SUPER + K", function() smart_move_focus("up") end, { repeating = true })
-hl.bind("SUPER + J", function() smart_move_focus("down") end, { repeating = true })
+hl.bind("SUPER + left", hl.dsp.layout("focus l"), { repeating = true })
+hl.bind("SUPER + right", hl.dsp.layout("focus r"), { repeating = true })
+hl.bind("SUPER + up", hl.dsp.focus({ direction = "up" }), { repeating = true })
+hl.bind("SUPER + down", hl.dsp.focus({ direction = "down" }), { repeating = true })
+hl.bind("SUPER + H", hl.dsp.layout("focus l"), { repeating = true })
+hl.bind("SUPER + L", hl.dsp.layout("focus r"), { repeating = true })
+hl.bind("SUPER + K", hl.dsp.focus({ direction = "up" }), { repeating = true })
+hl.bind("SUPER + J", hl.dsp.focus({ direction = "down" }), { repeating = true })
 
 -- Window movement
-hl.bind("SUPER + SHIFT + left", hy3.move_window("left"))
-hl.bind("SUPER + SHIFT + right", hy3.move_window("right"))
-hl.bind("SUPER + SHIFT + up", hy3.move_window("up"))
-hl.bind("SUPER + SHIFT + down", hy3.move_window("down"))
-hl.bind("SUPER + SHIFT + K", hy3.move_window("up"))
-hl.bind("SUPER + SHIFT + J", hy3.move_window("down"))
-hl.bind("SUPER + SHIFT + H", hy3.move_window("left", { once = true }))
-hl.bind("SUPER + SHIFT + L", hy3.move_window("right", { once = true }))
+hl.bind("SUPER + SHIFT + left", hl.dsp.layout("swapcol l"))
+hl.bind("SUPER + SHIFT + right", hl.dsp.layout("swapcol r"))
+hl.bind("SUPER + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind("SUPER + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
+hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+hl.bind("SUPER + SHIFT + H", hl.dsp.layout("swapcol l"))
+hl.bind("SUPER + SHIFT + L", hl.dsp.layout("swapcol r"))
 
--- hy3 expand/shrink
-hl.bind("SUPER + CTRL + L", hy3.expand("expand"))
-hl.bind("SUPER + CTRL + H", hy3.expand("shrink"))
+-- Column resize
+hl.bind("SUPER + CTRL + L", hl.dsp.layout("colresize +0.1"))
+hl.bind("SUPER + CTRL + H", hl.dsp.layout("colresize -0.1"))
 
 -- Close window
 hl.bind("ALT + F4", hl.dsp.window.close())
-hl.bind("SUPER + Q", hy3.kill_active())
+hl.bind("SUPER + Q", hl.dsp.window.close())
 
 -- Floating
 hl.bind("SUPER + ALT + space", hl.dsp.window.float({ action = "toggle" }))
@@ -65,10 +55,10 @@ hl.bind("CTRL + SUPER + J", hl.dsp.focus({ workspace = "r+1" }))
 hl.bind("CTRL + SUPER + K", hl.dsp.focus({ workspace = "r-1" }))
 
 -- Move window to workspace
-hl.bind("CTRL + SUPER + SHIFT + down", hy3.move_to_workspace("r+1"))
-hl.bind("CTRL + SUPER + SHIFT + up", hy3.move_to_workspace("r-1"))
-hl.bind("CTRL + SUPER + SHIFT + J", hy3.move_to_workspace("r+1"))
-hl.bind("CTRL + SUPER + SHIFT + K", hy3.move_to_workspace("r-1"))
+hl.bind("CTRL + SUPER + SHIFT + down", hl.dsp.window.move({ workspace = "r+1", follow = true }))
+hl.bind("CTRL + SUPER + SHIFT + up", hl.dsp.window.move({ workspace = "r-1", follow = true }))
+hl.bind("CTRL + SUPER + SHIFT + J", hl.dsp.window.move({ workspace = "r+1", follow = true }))
+hl.bind("CTRL + SUPER + SHIFT + K", hl.dsp.window.move({ workspace = "r-1", follow = true }))
 
 -- Mouse scroll workspace
 hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "r+1" }))
