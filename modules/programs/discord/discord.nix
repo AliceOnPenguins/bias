@@ -364,6 +364,14 @@
                     scope = "myMessages";
                     id = "e37176d0-8062-4516-9caf-49d35b5f7bd7";
                   }
+                  {
+                    name = "italicize-messages";
+                    find = ''^([\s\S]+)$'';
+                    replace = "_$1_";
+                    onlyIfIncludes = "";
+                    scope = "myMessages";
+                    id = "9d4b2f6a-3e7c-48a1-b95d-1f6e0a8c4d72";
+                  }
                 ];
               };
             };
