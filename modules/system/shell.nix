@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-    flake.nixosModules.defaultShell = { pkgs, lib, ... }: {
-        users.defaultUserShell = pkgs.fish;
-      };
+  flake.nixosModules.defaultShell = { pkgs, lib, ... }: {
+    users.defaultUserShell = pkgs.zsh;
+  };
 }

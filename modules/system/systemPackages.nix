@@ -9,7 +9,8 @@
         withUWSM = true;
         xwayland.enable = true;
       };
-      fish.enable = true;
+      fish.enable = false;
+      zsh.enable = true;
       steam.enable = true;
     };
 
@@ -23,7 +24,6 @@
       xdg-desktop-portal-termfilechooser
       gcc
       wl-clipboard
-      fzf
       tree-sitter
       psmisc
       terminus_font
