@@ -13,6 +13,17 @@
         ignoreSpace = true;
         extended = true;
       };
+      plugins = [
+        {
+          name = "fzf-tab";
+          src = pkgs.fetchFromGitHub {
+            owner = "Aloxaf";
+            repo = "fzf-tab";
+            rev = "master";
+            sha256 = "sha256-YhTSu0P7mFlVx1zBvbT0jNstkamcZHhPYJHKMAHgyuM=";
+          };
+        }
+      ];
       shellAliases = {
         vi = "nvim";
         ls = "eza --icons -a";
