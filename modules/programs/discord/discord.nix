@@ -366,7 +366,7 @@
                   }
                   {
                     name = "italicize-messages";
-                    find = ''^([\s\S]+)$'';
+                    find = ''^(?!.*https?:\/\/)([\s\S]+)$'';
                     replace = "_$1_";
                     onlyIfIncludes = "";
                     scope = "myMessages";
