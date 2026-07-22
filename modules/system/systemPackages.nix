@@ -9,7 +9,7 @@
         withUWSM = true;
         xwayland.enable = true;
       };
-      fish.enable = false;
+      fish.enable = true;
       zsh.enable = true;
       steam.enable = true;
     };
