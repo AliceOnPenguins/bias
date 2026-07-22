@@ -35,6 +35,8 @@
       };
       initContent = ''
         fastfetch
+        bindkey '^H' backward-kill-word
+        bindkey '^[[3;5~' backward-kill-word
       '';
     };
   };
