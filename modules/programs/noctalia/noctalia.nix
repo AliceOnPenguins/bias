@@ -127,7 +127,7 @@
             workspaces = {
               focused_color = "error";
               empty_color = "outline";
-              minimal = true;
+              style = "minimal";
               occupied_color = "outline";
             };
           };
