@@ -6,7 +6,7 @@ My take on NixOS with a [Dendritic structure](https://github.com/mightyiam/dendr
 |---|---|
 | OS | [NixOS](https://nixos.org/) |
 | WM | [Hyprland](https://github.com/hyprwm/Hyprland) |
-| Shell | [fish](https://github.com/fish-shell/fish-shell) |
+| Shell | [zsh](https://www.zsh.org/) |
 | Terminal | [kitty](https://github.com/kovidgoyal/kitty) |
 | Editor | [neovim](https://neovim.io/) through [nvf](https://github.com/NotAShelf/nvf) |
 | Files | [Yazi](https://yazi-rs.github.io/) |
