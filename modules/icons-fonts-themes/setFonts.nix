@@ -4,7 +4,7 @@
       font = {
         nerdFont = lib.mkOption {
           type = lib.types.str;
-          default = "DepartureMono Nerd Font";
+          default = "PlemolJP Console NF Text";
         };
       };
     };
@@ -14,7 +14,7 @@
       font = {
         nerdFont = lib.mkOption {
           type = lib.types.str;
-          default = "DepartureMono Nerd Font";
+          default = "PlemolJP Console NF Text";
         };
       };
     };
