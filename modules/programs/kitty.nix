@@ -11,7 +11,7 @@
         enable = true;
         settings = {
           font_family = config.theme.font.nerdFont;
-          font_size = 14;
+          font_size = 16;
           cursor_shape = "block";
           scrollback_lines = 1600;
           url_style = "curly";
