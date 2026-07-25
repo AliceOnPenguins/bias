@@ -14,6 +14,7 @@
           _7zz
           oculante
           lxqt.pavucontrol-qt
+          xivlauncher
           obs-studio
           gimp
           mpv
