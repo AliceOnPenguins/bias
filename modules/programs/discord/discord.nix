@@ -328,6 +328,9 @@
               FixYoutubeEmbeds = {
                 enabled = true;
               };
+              NoNitroUpsell = {
+                enabled = true;
+              };
               TextReplace = {
                 enabled = true;
                 stringRules = [ ];
