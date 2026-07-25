@@ -11,31 +11,30 @@
         home.stateVersion = "26.11";
         imports = builtins.attrValues self.homeModules;
         home.packages = with pkgs; [
-            rembg
-            _7zz
-            oculante
-            lxqt.pavucontrol-qt
-            obs-studio
-            gimp
-            mpv
-            adw-gtk3
-            papirus-icon-theme
-            nwg-look
-            qt6Packages.qt6ct
-            ncdu
-            eza
-            tree
-            protonplus
-            protontricks
-            prismlauncher
-            hyprpicker
-            grim
-            slurp
-            faugus-launcher
-            bitwarden-desktop
-            filezilla
-            proton-vpn
-            ];
+          _7zz
+          oculante
+          lxqt.pavucontrol-qt
+          obs-studio
+          gimp
+          mpv
+          adw-gtk3
+          papirus-icon-theme
+          nwg-look
+          qt6Packages.qt6ct
+          ncdu
+          eza
+          tree
+          protonplus
+          protontricks
+          prismlauncher
+          hyprpicker
+          grim
+          slurp
+          faugus-launcher
+          bitwarden-desktop
+          filezilla
+          proton-vpn
+        ];
       };
     };
   };
