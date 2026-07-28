@@ -1,31 +1,32 @@
 { self, inputs, ... }: {
-    flake.nixosConfigurations.bias = inputs.nixpkgs.lib.nixosSystem {
-        modules = [
+  flake.nixosConfigurations.bias = inputs.nixpkgs.lib.nixosSystem {
+    modules = [
 
-        ({ ... }: {
-          imports = [ inputs.aagl.nixosModules.default ];
-          nix.settings = inputs.aagl.nixConfig;
-          programs.anime-game-launcher.enable = true;
-        })
+      ({ ... }: {
+        imports = [ inputs.aagl.nixosModules.default ];
+        nix.settings = inputs.aagl.nixConfig;
+        programs.anime-game-launcher.enable = true;
+      })
 
-        self.nixosModules.biasConfiguration
-        self.nixosModules.home-manager
-        self.nixosModules.gnome-keyring
-        self.nixosModules.defaultShell
-        self.nixosModules.cups-printing
-        self.nixosModules.pipewire
-        self.nixosModules.networking
-        self.nixosModules.time-locale
-        self.nixosModules.boot
-        self.nixosModules.usersAlice
-        self.nixosModules.systemPackages
-        self.nixosModules.consoleSetup
-        self.nixosModules.fontSetup
-        self.nixosModules.flatpak
-        self.nixosModules.locateService
-        self.nixosModules.docker
-        self.nixosModules.sddm
-        ];
-        specialArgs = { inherit inputs; };
-      };
-  }
+      self.nixosModules.biasConfiguration
+      self.nixosModules.home-manager
+      self.nixosModules.gnome-keyring
+      self.nixosModules.defaultShell
+      self.nixosModules.cups-printing
+      self.nixosModules.pipewire
+      self.nixosModules.networking
+      self.nixosModules.time-locale
+      self.nixosModules.boot
+      self.nixosModules.usersAlice
+      self.nixosModules.systemPackages
+      self.nixosModules.consoleSetup
+      self.nixosModules.fontSetup
+      self.nixosModules.flatpak
+      self.nixosModules.locateService
+      self.nixosModules.docker
+      self.nixosModules.sddm
+      self.nixosModules.diskAutomount
+    ];
+    specialArgs = { inherit inputs; };
+  };
+}
