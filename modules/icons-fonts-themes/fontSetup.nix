@@ -4,15 +4,15 @@
     let
       berkeleyMono = pkgs.stdenvNoCC.mkDerivation {
         pname = "berkeley-mono";
-        version = "1.0";
+        version = "2.0";
 
         src = pkgs.requireFile {
-          name = "berkeley-mono-otf-1.0.zip";
-          sha256 = "1q76fh0kqy2w57vdd72q8ydda620xid25rddavl64j62q5ww2ghw";
+          name = "berkeley-mono-otf-2.0.zip";
+          sha256 = "0lllpg8pympncdj8z14la521i0sdrzbsc5lj2cpqmxm6v2rlnaw0";
           message = ''
             Run:
-              mv ~/fonts/berkeley-mono-otf-1.0.zip $PWD/berkeley-mono-otf-1.0.zip
-              nix-prefetch-url --type sha256 file://$PWD/berkeley-mono-otf-1.0.zip
+              mv ~/fonts/berkeley-mono-otf-2.0.zip $PWD/berkeley-mono-otf-2.0.zip
+              nix-prefetch-url --type sha256 file://$PWD/berkeley-mono-otf-2.0.zip
           '';
         };
 
