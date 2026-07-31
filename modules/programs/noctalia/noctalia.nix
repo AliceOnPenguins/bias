@@ -14,6 +14,7 @@
 
           theme = {
             mode = "dark";
+            pure_black_dark = true;
             source = "custom";
             custom_palette = "yunah";
             community_palette = "Vesper";
@@ -43,7 +44,7 @@
           bar = {
             order = [ "uwu" ];
             uwu = {
-              background_opacity = 0.79;
+              background_opacity = 0.85;
               border = "on_primary";
               capsule_fill = "on_hover";
               center = [ ];
@@ -80,14 +81,14 @@
           };
 
           notification = {
-            background_opacity = 0.79;
+            background_opacity = 0.85;
             offset_x = 10.0;
             offset_y = 10.0;
             scale = 0.75;
           };
 
           osd = {
-            background_opacity = 0.79;
+            background_opacity = 0.85;
             scale = 0.75;
           };
 
