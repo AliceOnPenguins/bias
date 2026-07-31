@@ -44,17 +44,20 @@
           bar = {
             order = [ "uwu" ];
             uwu = {
-              background_opacity = 0.85;
+              background_opacity = 1.00;
               border = "on_primary";
               capsule_fill = "on_hover";
-              center = [ ];
+              center = [ "clock" ];
               end = [
-                "clock"
                 "tray"
                 "notifications"
-                "media"
+                "spacer_3"
+                "ram"
+                "spacer_2"
+                "cpu"
               ];
               font_family = config.theme.font.nerdFont;
+              font_weight = 400;
               margin_edge = 0;
               margin_ends = 0;
               padding = 15;
@@ -62,9 +65,9 @@
               scale = 1.7;
               start = [
                 "workspaces"
-                "active_window"
+                "media"
               ];
-              thickness = 30;
+              thickness = 35;
               widget_spacing = 10;
             };
           };
@@ -81,14 +84,14 @@
           };
 
           notification = {
-            background_opacity = 0.85;
+            background_opacity = 1.00;
             offset_x = 10.0;
             offset_y = 10.0;
             scale = 0.75;
           };
 
           osd = {
-            background_opacity = 0.85;
+            background_opacity = 1.00;
             scale = 0.75;
           };
 
@@ -131,6 +134,13 @@
               style = "minimal";
               occupied_color = "outline";
             };
+            media = {
+              artist_first = true;
+              hide_album_art = true;
+              max_length = 350;
+            };
+            spacer_2.type = "spacer";
+            spacer_3.type = "spacer";
           };
         };
       };
