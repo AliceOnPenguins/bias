@@ -55,7 +55,7 @@ hl.config({
       special = false,
       new_optimizations = true,
       size = 2,
-      passes = 2,
+      passes = 3,
       noise = 0.05,
       contrast = 1.00,
       vibrancy = 0.00,
