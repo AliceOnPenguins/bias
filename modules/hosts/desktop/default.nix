@@ -26,6 +26,7 @@
       self.nixosModules.docker
       self.nixosModules.sddm
       self.nixosModules.diskAutomount
+      self.nixosModules.ydotool
     ];
     specialArgs = { inherit inputs; };
   };
