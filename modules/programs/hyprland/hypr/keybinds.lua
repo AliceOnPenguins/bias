@@ -95,4 +95,4 @@ hl.bind("SUPER + O", hl.dsp.exec_cmd(noctalia .. " bar-toggle"))
 hl.bind("CTRL + SUPER + T", hl.dsp.exec_cmd("killall -9 noctalia && sleep 1 && noctalia"))
 
 -- Scripts
-hl.bind("ALT + F", hl.dsp.exec_cmd("bash ~/bias/scripts/ihatedialogue.sh"))
+hl.bind("ALT + V", hl.dsp.exec_cmd("bash ~/bias/scripts/ihatedialogue.sh"))
