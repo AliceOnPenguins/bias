@@ -12,6 +12,7 @@
         imports = builtins.attrValues self.homeModules;
         home.packages = with pkgs; [
           _7zz
+          losslesscut-bin
           qbittorrent
           oculante
           lxqt.pavucontrol-qt
