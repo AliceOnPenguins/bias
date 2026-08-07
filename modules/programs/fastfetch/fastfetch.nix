@@ -9,7 +9,7 @@
           type = "auto";
           source = "~/bias/modules/programs/fastfetch/assets/yunah.webp";
           height = 20;
-          width = 32;
+          width = 30;
           padding = {
             top = 1;
             left = 2;
