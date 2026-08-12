@@ -35,14 +35,14 @@ hl.config({
 
   decoration = {
     rounding = 0,
-    rounding_power = 0,
+    rounding_power = 1,
     active_opacity = 1.0,
     inactive_opacity = 1.0,
 
     shadow = {
       enabled      = false,
       range        = 12,
-      render_power = 6,
+      render_power = 4,
       sharp        = false,
       color        = "rgba(0,0,0,0.19)",
       offset       = { 0, 0 },
