@@ -45,6 +45,9 @@
       ];
     };
 
+    security.polkit.enable = true;
+    security.wrappers.pkexec.enable = lib.mkForce true;
+
     # DO NOT CHANGE THIS VALUE MANUALLY
     system.stateVersion = "26.11"; # Did you read the comment?
   };
