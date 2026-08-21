@@ -58,16 +58,16 @@
               ];
               font_family = config.theme.font.nerdFont;
               font_weight = 400;
-              margin_edge = 0;
-              margin_ends = 0;
+              margin_edge = 10;
+              margin_ends = 30;
               padding = 15;
-              radius = 0;
-              scale = 1.7;
+              radius = 17;
+              scale = 1.6;
               start = [
                 "workspaces"
                 "media"
               ];
-              thickness = 35;
+              thickness = 45;
               widget_spacing = 10;
             };
           };
