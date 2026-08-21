@@ -12,6 +12,7 @@
         imports = builtins.attrValues self.homeModules;
         home.packages = with pkgs; [
           _7zz
+          gpu-screen-recorder-gtk
           losslesscut-bin
           qbittorrent
           oculante

@@ -36,6 +36,15 @@
       allowUnfree = true;
     };
 
+    hardware.graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [
+        mesa
+        libva
+      ];
+    };
+
     # DO NOT CHANGE THIS VALUE MANUALLY
     system.stateVersion = "26.11"; # Did you read the comment?
   };
