@@ -401,14 +401,14 @@
           };
           extraQuickCss = ''
             *, *::before, *::after {
-                font-family:'${config.theme.font.uiFont}', mono !important;
+                font-family:'${config.theme.font.uiFont}', 'Noto Sans Arabic', 'Noto Sans Bengali', 'Noto Sans Symbols', 'Noto Color Emoji', mono !important;
               }
               
               :root {
-                  --font-primary: '${config.theme.font.uiFont}', mono;
-                  --font-display: '${config.theme.font.uiFont}', mono;
-                  --font-code: '${config.theme.font.monoFont}', mono;
-                  --font-headline: '${config.theme.font.uiFont}', mono;
+                  --font-primary: '${config.theme.font.uiFont}', 'Noto Sans Arabic', 'Noto Sans Bengali', 'Noto Sans Symbols', 'Noto Color Emoji', mono;
+                  --font-display: '${config.theme.font.uiFont}', 'Noto Sans Arabic', 'Noto Sans Bengali', 'Noto Sans Symbols', 'Noto Color Emoji', mono;
+                  --font-code: '${config.theme.font.monoFont}', 'Noto Sans Mono', mono;
+                  --font-headline: '${config.theme.font.uiFont}', 'Noto Sans Arabic', 'Noto Sans Bengali', 'Noto Sans Symbols', 'Noto Color Emoji', mono;
                 }
           '';
         };
