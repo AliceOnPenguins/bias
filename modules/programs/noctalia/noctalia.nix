@@ -56,7 +56,7 @@
                 "spacer_2"
                 "cpu"
               ];
-              font_family = config.theme.font.nerdFont;
+              font_family = config.theme.font.uiFont;
               font_weight = 400;
               margin_edge = 10;
               margin_ends = 30;
@@ -101,7 +101,7 @@
             clipboard_history_max_entries = 100;
             corner_radius_scale = 0.55;
             date_format = "{:%A}, {:/%d/%m/%Y}";
-            font_family = config.theme.font.nerdFont;
+            font_family = config.theme.font.uiFont;
             lang = "en";
             polkit_agent = true;
             settings_show_advanced = true;

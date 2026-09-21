@@ -1,5 +1,11 @@
 { self, inputs, ... }: {
-  flake.nixosModules.sddm = { pkgs, lib, config, ... }:
+  flake.nixosModules.sddm =
+    {
+      pkgs,
+      lib,
+      config,
+      ...
+    }:
     let
       thyxThemed = inputs.thyx.packages.${pkgs.system}.default.overrideAttrs (old: {
         postInstall = (old.postInstall or "") + ''
@@ -8,7 +14,7 @@
           [General]
           AutoFingerprintOnLoad=true
           Background="./themebackground.jpeg"
-          Font="${config.theme.font.nerdFont}"
+          Font="${config.theme.font.uiFont}"
           FontSize="20"
           FormPosition="center"
           Blur="0.03"
@@ -30,8 +36,12 @@
           EOF
         '';
       });
-    in {
-      imports = [ inputs.thyx.nixosModules.default self.nixosModules.setFonts ];
+    in
+    {
+      imports = [
+        inputs.thyx.nixosModules.default
+        self.nixosModules.setFonts
+      ];
       services.displayManager.sddm = {
         enable = true;
         wayland.enable = true;

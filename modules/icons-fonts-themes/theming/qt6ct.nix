@@ -17,8 +17,8 @@
             style = "Fusion";
           };
           Fonts = {
-            fixed = "\"${config.theme.font.nerdFont},16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular,0,0\"";
-            general = "\"${config.theme.font.nerdFont},16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular,0,0\"";
+            fixed = "\"${config.theme.font.monoFont},16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular,0,0\"";
+            general = "\"${config.theme.font.uiFont},16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular,0,0\"";
           };
           Interface = {
             activate_item_on_single_click = 1;

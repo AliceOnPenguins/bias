@@ -18,7 +18,7 @@
           package = pkgs.papirus-icon-theme;
         };
         font = {
-          name = config.theme.font.nerdFont;
+          name = config.theme.font.uiFont;
           size = 16;
         };
         cursorTheme = {

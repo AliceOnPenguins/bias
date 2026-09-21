@@ -401,14 +401,14 @@
           };
           extraQuickCss = ''
             *, *::before, *::after {
-                font-family:'${config.theme.font.nerdFont}', mono !important;
+                font-family:'${config.theme.font.uiFont}', mono !important;
               }
               
               :root {
-                  --font-primary: '${config.theme.font.nerdFont}', mono;
-                  --font-display: '${config.theme.font.nerdFont}', mono;
-                  --font-code: '${config.theme.font.nerdFont}', mono;
-                  --font-headline: '${config.theme.font.nerdFont}', mono;
+                  --font-primary: '${config.theme.font.uiFont}', mono;
+                  --font-display: '${config.theme.font.uiFont}', mono;
+                  --font-code: '${config.theme.font.monoFont}', mono;
+                  --font-headline: '${config.theme.font.uiFont}', mono;
                 }
           '';
         };
