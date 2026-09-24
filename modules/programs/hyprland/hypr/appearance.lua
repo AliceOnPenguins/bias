@@ -39,6 +39,11 @@ hl.config({
     active_opacity = 1.0,
     inactive_opacity = 1.0,
 
+    motion_blur = {
+      enabled = true,
+      samples = 7,
+    },
+
     shadow = {
       enabled      = false,
       range        = 12,
