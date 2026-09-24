@@ -1,0 +1,133 @@
+/**
+* @name Ls Dark
+* @description Custom sunset/lesbian-flag theme (orange + rose)
+* @author Alice
+* @version 1.0.0
+*/
+
+:root, .theme-dark {
+  /* backgrounds */
+  --background-primary: #1a1a1c;
+  --background-secondary: #252428;
+  --background-secondary-alt: #201f23;
+  --background-tertiary: #151517;
+  --background-floating: #252428;
+  --background-mod-strong: #8f726850;
+
+  /* Status indicators */
+  --online: #a8e6cf;
+  --dnd: #f2789a;
+  --idle: #ffd3a5;
+  --streaming: #b55690;
+  --offline: #8f7267;
+
+  /* text */
+  --text-normal: #f5e3d8;
+  --text-muted: #c9a390;
+  --text-link: #e0609a;
+  --header-primary: #f5e3d8;
+  --header-secondary: #c9a390;
+
+  /* accent */
+  --brand-experiment: #e0609a;
+  --brand-experiment-560: #ff9a56;
+
+  /* interactive states  */
+  --interactive-normal: #c9a390;
+  --interactive-hover: #f5e3d8;
+  --interactive-active: #e0609a;
+  --interactive-muted: #8f7267;
+
+  /* semantic */
+  --status-danger: #f2789a;
+  --status-positive: #a8e6cf;
+  --status-warning: #ffd3a5;
+
+  /* hover  */
+  --background-modifier-hover: #e0609a1a;
+  --background-modifier-selected: #e0609a30;
+
+  /* scrollbar */
+  --scrollbar-thin-thumb: #8f7267;
+  --scrollbar-thin-track: transparent;
+
+  /* buttons */
+  --button-primary-background: #e0609a;
+  --button-primary-background-hover: #ff9a56;
+  --button-primary-background-active: #e0609a;
+  --button-primary-foreground: #2a2830;
+
+}
+  /* overrides */
+  button[class*="primary_"] {
+    background-color: #e0609a !important;
+    color: #2a2830 !important;
+  }
+
+  button[class*="primary_"] * {
+    color: #2a2830 !important;
+  }
+
+  div[class*="addFriend"] {
+    background-color: #e0609a !important;
+    color: #2a2830 !important;
+  }
+
+  div[class*="addFriend"] * {
+    color: #2a2830 !important;
+  }
+
+[fill="#84858d" i], [fill="#80848e" i],
+[style*="background-color: #84858D" i], [style*="background-color: #80848E" i],
+[style*="fill: #84858D" i], [style*="fill: #80848E" i] {
+  fill: #8f7267 !important;
+  background-color: #8f7267 !important;
+}
+
+[fill="#45a366" i], [fill="#23a55a" i],
+[style*="background-color: #45A366" i], [style*="background-color: #23A55A" i],
+[style*="fill: #45A366" i], [style*="fill: #23A55A" i] {
+  fill: #a8e6cf !important;
+  background-color: #a8e6cf !important;
+}
+
+[fill="#ffc04e" i],
+[style*="background-color: #FFC04E" i],
+[style*="fill: #FFC04E" i] {
+  fill: #ffd3a5 !important;
+  background-color: #ffd3a5 !important;
+}
+
+[fill="#da3e44" i], [fill="#ed4245" i],
+[style*="background-color: #DA3E44" i], [style*="background-color: #ED4245" i],
+[style*="fill: #DA3E44" i], [style*="fill: #ED4245" i] {
+  fill: #f2789a !important;
+  background-color: #f2789a !important;
+}
+
+[fill="#593695" i],
+[style*="background-color: #593695" i],
+[style*="fill: #593695" i] {
+  fill: #b55690 !important;
+  background-color: #b55690 !important;
+}
+
+[style*="rgb(132, 133, 141)" i], [style*="rgb(128, 132, 142)" i] {
+  background-color: #8f7267 !important;
+}
+
+[style*="rgb(69, 163, 102)" i], [style*="rgb(35, 165, 90)" i] {
+  background-color: #a8e6cf !important;
+}
+
+[style*="rgb(255, 192, 78)" i] {
+  background-color: #ffd3a5 !important;
+}
+
+[style*="rgb(218, 62, 68)" i], [style*="rgb(237, 66, 69)" i] {
+  background-color: #f2789a !important;
+}
+
+[style*="rgb(89, 54, 149)" i] {
+  background-color: #b55690 !important;
+}
