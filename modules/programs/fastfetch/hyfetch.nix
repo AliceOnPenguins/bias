@@ -3,11 +3,11 @@
         programs.hyfetch = {
             enable = true;
             settings = {
-                preset = "aroace1";
+                preset = "lesbian";
                 mode = "rgb";
                 auto_detect_light_dark = true;
                 light_dark = "dark";
-                lightness = 0.15;
+                lightness = 0.59;
                 color_align = {
                     mode = "horizontal";
                   };
