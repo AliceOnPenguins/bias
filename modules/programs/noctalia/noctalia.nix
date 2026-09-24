@@ -16,7 +16,7 @@
             mode = "dark";
             pure_black_dark = true;
             source = "custom";
-            custom_palette = "yunah";
+            custom_palette = "ls";
             community_palette = "Vesper";
             builtin = "Kanagawa";
             templates = {
@@ -42,7 +42,10 @@
           };
 
           bar = {
-            order = [ "uwu" ];
+            order = [
+              # "uwu"
+              "sex"
+            ];
             uwu = {
               background_opacity = 1.00;
               border = "on_primary";
@@ -69,6 +72,76 @@
               ];
               thickness = 45;
               widget_spacing = 10;
+            };
+            sex = {
+              position = "top";
+              thickness = 48;
+              layer = "top";
+              reserve_space = true;
+              margin_edge = 12;
+              margin_ends = 60;
+              padding = 14;
+              widget_spacing = 10;
+              radius = 16;
+              border = "outline";
+              border_width = 1.0;
+              shadow = true;
+              background_opacity = 0.92;
+              scale = 1.3;
+              font_scale = 1.1;
+              font_weight = 500;
+              font_family = config.theme.font.uiFont;
+
+              capsule = true;
+              capsule_fill = "surface_variant";
+              capsule_radius = 14.0;
+              capsule_opacity = 0.92;
+              capsule_padding = 10;
+              hover_highlight = true;
+
+              start = [ "active_window" ];
+              center = [
+                "group:time"
+                "weather"
+              ];
+              end = [
+                "group:media"
+                "group:quick"
+                "control-center"
+              ];
+
+              capsule_group = [
+                {
+                  id = "time";
+                  members = [ "clock" ];
+                  fill = "primary";
+                  foreground = "#2a2830";
+                  radius = 14.0;
+                  padding = 10;
+                }
+                {
+                  id = "media";
+                  members = [ "media" ];
+                  fill = "tertiary";
+                  foreground = "#2a2830";
+                  radius = 14.0;
+                  padding = 10;
+                }
+                {
+                  id = "quick";
+                  members = [
+                    "network"
+                    "bluetooth"
+                    "volume"
+                    "battery"
+                  ];
+                  fill = "secondary";
+                  foreground = "#2a2830";
+                  accordion = true;
+                  accordion_direction = "start";
+                  padding = 10;
+                }
+              ];
             };
           };
 
