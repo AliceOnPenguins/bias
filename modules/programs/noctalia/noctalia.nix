@@ -134,6 +134,7 @@
                     "bluetooth"
                     "volume"
                     "battery"
+                    "tray"
                   ];
                   fill = "secondary";
                   foreground = "#2a2830";
