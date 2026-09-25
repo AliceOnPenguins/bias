@@ -24,6 +24,17 @@
             display-run = " Run";
             display-window = " Window";
             drun-display-format = "{name}";
+
+            kb-remove-char-back = "BackSpace,Shift+BackSpace";
+            kb-remove-to-eol = "Control+Shift+k";
+            kb-mode-complete = "Control+Shift+l";
+            kb-accept-entry = "Return,KP_Enter";
+
+            kb-row-up = "Up,Control+k";
+            kb-row-down = "Down,Control+j";
+            kb-mode-previous = "Control+h";
+            kb-mode-next = "Control+l";
+            click-to-exit = true;
           };
 
           theme = {
@@ -53,8 +64,6 @@
               border-radius = mkLiteral "4px";
               padding = mkLiteral "0px";
               background-color = mkLiteral "@bg0";
-              # the flag, as structure rather than decoration: five stripes
-              # run down the left edge as a real border, not a top-bar wash.
               border = mkLiteral "0px 0px 0px 8px";
               border-color = mkLiteral "linear-gradient(180deg, #d52d00, #ff9a56, #ffffff, #e0609a, #a30262)";
             };
