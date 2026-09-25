@@ -90,9 +90,12 @@ hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a"))
 
 -- Noctalia IPC
 hl.bind("SUPER + V", hl.dsp.exec_cmd(noctalia .. " panel-toggle clipboard"))
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(noctalia .. " panel-toggle launcher"))
+-- hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(noctalia .. " panel-toggle launcher"))
 hl.bind("SUPER + O", hl.dsp.exec_cmd(noctalia .. " bar-toggle"))
 hl.bind("CTRL + SUPER + T", hl.dsp.exec_cmd("killall -9 noctalia && sleep 1 && noctalia"))
+
+-- rofi launcher
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 
 -- Scripts
 hl.bind("ALT + V", hl.dsp.exec_cmd("bash ~/bias/scripts/ihatedialogue.sh"))
