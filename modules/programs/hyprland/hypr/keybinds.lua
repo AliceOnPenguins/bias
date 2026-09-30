@@ -9,7 +9,7 @@
 
 local noctalia = "noctalia msg"
 local terminal = "kitty -1"
-local music = "kitty -1 rmpc"
+-- local music = "kitty -1 rmpc"
 local filemanager = "kitty -1 yazi"
 local browser = "firefox"
 local editor = "kitty -1 nvim"
@@ -73,7 +73,7 @@ hl.bind("SUPER + T", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(filemanager))
 hl.bind("SUPER + W", hl.dsp.exec_cmd(browser))
 hl.bind("SUPER + C", hl.dsp.exec_cmd(editor))
-hl.bind("SUPER + M", hl.dsp.exec_cmd(music))
+-- hl.bind("SUPER + M", hl.dsp.exec_cmd(music))
 
 hl.bind("CTRL + SUPER + V", hl.dsp.exec_cmd("pavucontrol-qt"))
 hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("kitty -1 btop"))
@@ -81,6 +81,8 @@ hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd("kitty -1 btop"))
 -- Scratchpads
 hl.bind("SUPER + D", hl.dsp.workspace.toggle_special("equibop"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd("equibop", { float = false, move = { 0, 0 } }))
+hl.bind("SUPER + M", hl.dsp.workspace.toggle_special("spotify"))
+hl.bind("SUPER + M", hl.dsp.exec_cmd("spotify", { float = false, move = { 0, 0 } }))
 
 -- Screenshot
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region -z -s"))
