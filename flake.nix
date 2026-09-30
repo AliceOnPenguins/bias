@@ -21,6 +21,11 @@
       url = "github:NotAShelf/nvf";
     };
 
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     thyx = {
       url = "github:rccyx/thyx";
       inputs.nixpkgs.follows = "nixpkgs";
