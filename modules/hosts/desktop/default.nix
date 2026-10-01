@@ -27,6 +27,7 @@
       self.nixosModules.sddm
       self.nixosModules.diskAutomount
       self.nixosModules.ydotool
+      self.nixosModules.opentabletdriver
     ];
     specialArgs = { inherit inputs; };
   };
