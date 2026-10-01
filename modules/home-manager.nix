@@ -12,7 +12,6 @@
         imports = builtins.attrValues self.homeModules;
         home.packages = with pkgs; [
           _7zz
-          blockbench
           gpu-screen-recorder-gtk
           losslesscut-bin
           qbittorrent
@@ -39,6 +38,8 @@
           bitwarden-desktop
           filezilla
           proton-vpn
+          blockbench
+          osu-lazer-bin
         ];
       };
     };
