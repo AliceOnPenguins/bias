@@ -17,6 +17,7 @@
     environment.systemPackages = with pkgs; [
       git
       microfetch
+      duf
       hyprshutdown
       rocmPackages.rocm-smi
       ffmpeg
