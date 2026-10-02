@@ -24,69 +24,69 @@
           "break"
           {
             type = "custom";
-            format = "{##B8B8D1}╭─ {##F7A8C4}⋆｡°✩ system";
+            format = "{##CDB0C4}╭─ {##F7A8C4}⋆｡°✩ system";
           }
           {
             type = "os";
-            key = "{##B8B8D1}│  {##F7A8C4}  {#}";
+            key = "{##CDB0C4}│  {##F7A8C4}  {#}";
           }
           {
             type = "kernel";
-            key = "{##B8B8D1}│  {##F7A8C4}  {#}";
+            key = "{##CDB0C4}│  {##F7A8C4}  {#}";
           }
           {
             type = "packages";
-            key = "{##B8B8D1}│  {##F7A8C4}󰏖  {#}";
+            key = "{##CDB0C4}│  {##F7A8C4}󰏖  {#}";
             format = "{nix-all} nix, {flatpak-all} flatpak";
           }
           {
             type = "wm";
-            key = "{##B8B8D1}│  {##F7A8C4}󰨇  {#}";
+            key = "{##CDB0C4}│  {##F7A8C4}󰨇  {#}";
           }
           {
             type = "terminal";
-            key = "{##B8B8D1}│  {##F7A8C4}  {#}";
+            key = "{##CDB0C4}│  {##F7A8C4}  {#}";
           }
           {
             type = "shell";
-            key = "{##B8B8D1}│  {##F7A8C4}  {#}";
+            key = "{##CDB0C4}│  {##F7A8C4}  {#}";
           }
           {
             type = "localip";
-            key = "{##B8B8D1}│  {##F7A8C4}󰌗  {#}";
+            key = "{##CDB0C4}│  {##F7A8C4}󰌗  {#}";
           }
           {
             type = "custom";
-            format = "{##B8B8D1}╰─";
+            format = "{##CDB0C4}╰─";
           }
           "break"
           {
             type = "custom";
-            format = "{##B8B8D1}╭─ {##C9B6F2}⋆｡°✩ hardware";
+            format = "{##CDB0C4}╭─ {##9BD7F3}⋆｡°✩ hardware";
           }
           {
             type = "host";
-            key = "{##B8B8D1}│  {##C9B6F2}  {#}";
+            key = "{##CDB0C4}│  {##9BD7F3}  {#}";
           }
           {
             type = "gpu";
-            key = "{##B8B8D1}│  {##C9B6F2}  {#}";
+            key = "{##CDB0C4}│  {##9BD7F3}  {#}";
           }
           {
             type = "display";
-            key = "{##B8B8D1}│  {##C9B6F2}󰍹  {#}";
+            key = "{##CDB0C4}│  {##9BD7F3}󰍹  {#}";
           }
           {
             type = "memory";
-            key = "{##B8B8D1}│  {##C9B6F2}  {#}";
+            key = "{##CDB0C4}│  {##9BD7F3}  {#}";
           }
           {
             type = "disk";
-            key = "{##B8B8D1}│  {##C9B6F2}󱛟  {#}";
+            key = "{##CDB0C4}│  {##9BD7F3}󱛟  {#}";
           }
           {
             type = "custom";
-            format = "{##B8B8D1}╰─";
+            format = "{##CDB0C4}╰─";
           }
           "break"
         ];
