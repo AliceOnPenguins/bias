@@ -4,24 +4,24 @@
       enable = true;
       enableFishIntegration = true;
       settings = {
-        format = "[╭](dimmed white)[─](dimmed white)[ $username](bold #ff9a56)[ in](dimmed white) [$directory](white)$git_branch$git_status\n[╰─❯](dimmed white) ";
+        format = "[╭](dimmed white)[─](dimmed white)[ $username](bold #9bd7f3)[ in](dimmed white) [$directory](white)$git_branch$git_status\n[╰─❯](dimmed white) ";
         username = {
           format = "[$user]($style)";
           show_always = true;
-          style_user = "bold #ff9a56";
+          style_user = "bold #9bd7f3";
         };
         directory = {
-          format = "[ ](#ff9a56)[$path](#ff9a56)";
+          format = "[ ](#9bd7f3)[$path](#9bd7f3)";
           truncation_length = 3;
           truncate_to_repo = true;
           style = "";
         };
         git_branch = {
-          format = " [[ ](#e0609a bold)$branch](#e0609a)";
+          format = " [[ ](#f7a8c4 bold)$branch](#f7a8c4)";
           symbol = "";
         };
         git_status = {
-          format = "[ $all_status$ahead_behind](#ff9a56)";
+          format = "[ $all_status$ahead_behind](#9bd7f3)";
           conflicted = "=";
           ahead = "⇡\${count}";
           behind = "⇣\${count}";
