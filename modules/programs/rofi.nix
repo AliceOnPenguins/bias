@@ -39,16 +39,14 @@
 
           theme = {
             "*" = {
-              bg0 = mkLiteral "#131114";
-              bg1 = mkLiteral "#1c1a1f";
-              bg2 = mkLiteral "#242026";
-              fg0 = mkLiteral "#f5e3d8";
-              fg1 = mkLiteral "#8f7a72";
-              dark-orange = mkLiteral "#d52d00";
-              orange = mkLiteral "#ff9a56";
-              flag-white = mkLiteral "#ffffff";
-              pink = mkLiteral "#e0609a";
-              dark-rose = mkLiteral "#a30262";
+              bg0 = mkLiteral "#131116";
+              bg1 = mkLiteral "#1a191e";
+              bg2 = mkLiteral "#262330";
+              fg0 = mkLiteral "#f6e6ee";
+              fg1 = mkLiteral "#8f7a9a";
+              blue = mkLiteral "#9bd7f3";
+              white = mkLiteral "#ffffff";
+              pink = mkLiteral "#f7a8c4";
 
               background-color = mkLiteral "transparent";
               text-color = mkLiteral "@fg0";
@@ -65,7 +63,7 @@
               padding = mkLiteral "0px";
               background-color = mkLiteral "@bg0";
               border = mkLiteral "0px 0px 0px 8px";
-              border-color = mkLiteral "linear-gradient(180deg, #d52d00, #ff9a56, #ffffff, #e0609a, #a30262)";
+              border-color = mkLiteral "linear-gradient(180deg, #9bd7f3, #f7a8c4, #ffffff, #f7a8c4, #9bd7f3)";
             };
 
             "mainbox" = {
@@ -131,7 +129,7 @@
 
             "element selected.normal" = {
               background-color = mkLiteral "@bg2";
-              text-color = mkLiteral "@flag-white";
+              text-color = mkLiteral "@white";
               border-radius = mkLiteral "0px";
               border = mkLiteral "0px 0px 0px 4px";
               border-color = mkLiteral "@pink";
