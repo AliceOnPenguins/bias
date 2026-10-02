@@ -34,7 +34,7 @@
         nem = "yazi ~/bias/";
       };
       initContent = ''
-        fastfetch
+        microfetch
         WORDCHARS='''
         bindkey '^H' backward-kill-word
         bindkey '^[[3;5~' kill-word
