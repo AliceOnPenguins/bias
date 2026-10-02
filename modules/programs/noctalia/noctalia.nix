@@ -16,7 +16,7 @@
             mode = "dark";
             pure_black_dark = true;
             source = "custom";
-            custom_palette = "ls";
+            custom_palette = "meow";
             community_palette = "Vesper";
             builtin = "Kanagawa";
             templates = {
