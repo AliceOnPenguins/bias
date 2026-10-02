@@ -44,7 +44,8 @@
           bar = {
             order = [
               # "uwu"
-              "sex"
+              # "sex"
+              "meow"
             ];
             uwu = {
               background_opacity = 1.00;
@@ -141,6 +142,82 @@
                   accordion = true;
                   accordion_direction = "start";
                   padding = 10;
+                }
+              ];
+            };
+            meow = {
+              position = "top";
+              thickness = 46;
+              layer = "top";
+              reserve_space = true;
+              margin_edge = 10;
+              margin_ends = 40;
+              padding = 6;
+              widget_spacing = 12;
+              radius = 0;
+              border = "outline";
+              border_width = 0.0;
+              shadow = false;
+              background_opacity = 0.0;
+              scale = 1.3;
+              font_scale = 1.05;
+              font_weight = 500;
+              font_family = config.theme.font.uiFont;
+
+              capsule = true;
+              capsule_fill = "surface_variant";
+              capsule_radius = 22.0;
+              capsule_opacity = 0.94;
+              capsule_padding = 12;
+              hover_highlight = true;
+
+              start = [ "group:focus" ];
+              center = [ "group:time" ];
+              end = [
+                "group:media"
+                "group:status"
+              ];
+
+              capsule_group = [
+                {
+                  id = "focus";
+                  members = [
+                    "workspaces"
+                    "active_window"
+                  ];
+                  fill = "surface_variant";
+                  radius = 22.0;
+                  padding = 14;
+                  widget_spacing = 14;
+                }
+                {
+                  id = "time";
+                  members = [ "clock" ];
+                  fill = "primary";
+                  foreground = "#2a2830";
+                  radius = 22.0;
+                  padding = 16;
+                }
+                {
+                  id = "media";
+                  members = [ "media" ];
+                  fill = "secondary";
+                  foreground = "#1e2a33";
+                  radius = 22.0;
+                  padding = 14;
+                }
+                {
+                  id = "status";
+                  members = [
+                    "tray"
+                    "volume"
+                    "notifications"
+                    "control-center"
+                  ];
+                  fill = "surface_variant";
+                  radius = 22.0;
+                  padding = 14;
+                  widget_spacing = 14;
                 }
               ];
             };
