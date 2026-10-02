@@ -1,0 +1,133 @@
+/**
+* @name Meow Dark
+* @description Pastel pink / baby blue / lavender theme
+* @author Alice
+* @version 1.0.0
+*/
+
+:root, .theme-dark {
+  /* backgrounds */
+  --background-primary: #1a191e;
+  --background-secondary: #262330;
+  --background-secondary-alt: #201e27;
+  --background-tertiary: #141319;
+  --background-floating: #262330;
+  --background-mod-strong: #8f7a9a50;
+
+  /* Status indicators */
+  --online: #a8e6cf;
+  --dnd: #f07a96;
+  --idle: #ffd3a5;
+  --streaming: #d0b4f5;
+  --offline: #8f7a9a;
+
+  /* text */
+  --text-normal: #f6e6ee;
+  --text-muted: #cdb0c4;
+  --text-link: #9bd7f3;
+  --header-primary: #f6e6ee;
+  --header-secondary: #cdb0c4;
+
+  /* accent */
+  --brand-experiment: #f7a8c4;
+  --brand-experiment-560: #9bd7f3;
+
+  /* interactive states  */
+  --interactive-normal: #cdb0c4;
+  --interactive-hover: #f6e6ee;
+  --interactive-active: #f7a8c4;
+  --interactive-muted: #8f7a9a;
+
+  /* semantic */
+  --status-danger: #f07a96;
+  --status-positive: #a8e6cf;
+  --status-warning: #ffd3a5;
+
+  /* hover  */
+  --background-modifier-hover: #f7a8c41a;
+  --background-modifier-selected: #f7a8c430;
+
+  /* scrollbar */
+  --scrollbar-thin-thumb: #8f7a9a;
+  --scrollbar-thin-track: transparent;
+
+  /* buttons */
+  --button-primary-background: #f7a8c4;
+  --button-primary-background-hover: #9bd7f3;
+  --button-primary-background-active: #f7a8c4;
+  --button-primary-foreground: #2a2830;
+
+}
+  /* overrides */
+  button[class*="primary_"] {
+    background-color: #f7a8c4 !important;
+    color: #2a2830 !important;
+  }
+
+  button[class*="primary_"] * {
+    color: #2a2830 !important;
+  }
+
+  div[class*="addFriend"] {
+    background-color: #f7a8c4 !important;
+    color: #2a2830 !important;
+  }
+
+  div[class*="addFriend"] * {
+    color: #2a2830 !important;
+  }
+
+[fill="#84858d" i], [fill="#80848e" i],
+[style*="background-color: #84858D" i], [style*="background-color: #80848E" i],
+[style*="fill: #84858D" i], [style*="fill: #80848E" i] {
+  fill: #8f7a9a !important;
+  background-color: #8f7a9a !important;
+}
+
+[fill="#45a366" i], [fill="#23a55a" i],
+[style*="background-color: #45A366" i], [style*="background-color: #23A55A" i],
+[style*="fill: #45A366" i], [style*="fill: #23A55A" i] {
+  fill: #a8e6cf !important;
+  background-color: #a8e6cf !important;
+}
+
+[fill="#ffc04e" i],
+[style*="background-color: #FFC04E" i],
+[style*="fill: #FFC04E" i] {
+  fill: #ffd3a5 !important;
+  background-color: #ffd3a5 !important;
+}
+
+[fill="#da3e44" i], [fill="#ed4245" i],
+[style*="background-color: #DA3E44" i], [style*="background-color: #ED4245" i],
+[style*="fill: #DA3E44" i], [style*="fill: #ED4245" i] {
+  fill: #f07a96 !important;
+  background-color: #f07a96 !important;
+}
+
+[fill="#593695" i],
+[style*="background-color: #593695" i],
+[style*="fill: #593695" i] {
+  fill: #d0b4f5 !important;
+  background-color: #d0b4f5 !important;
+}
+
+[style*="rgb(132, 133, 141)" i], [style*="rgb(128, 132, 142)" i] {
+  background-color: #8f7a9a !important;
+}
+
+[style*="rgb(69, 163, 102)" i], [style*="rgb(35, 165, 90)" i] {
+  background-color: #a8e6cf !important;
+}
+
+[style*="rgb(255, 192, 78)" i] {
+  background-color: #ffd3a5 !important;
+}
+
+[style*="rgb(218, 62, 68)" i], [style*="rgb(237, 66, 69)" i] {
+  background-color: #f07a96 !important;
+}
+
+[style*="rgb(89, 54, 149)" i] {
+  background-color: #d0b4f5 !important;
+}

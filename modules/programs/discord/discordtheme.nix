@@ -6,5 +6,8 @@
     xdg.configFile."equibop/themes/lsDark.css" = {
       source = ./lsDark.css;
     };
+    xdg.configFile."equibop/themes/meowDark.css" = {
+      source = ./meowDark.css;
+    };
   };
 }
